@@ -79,11 +79,11 @@ Listing channel locations in the `.condarc` file overrides conda defaults, causi
 Use `defaults` to automatically include all default channels. Non-URL channels are interpreted as Anaconda.org user names. You can change this by modifying the channel_alias as described in [Set a channel alias (channel_alias)](https://docs.conda.io/projects/conda/en/4.6.1/user-guide/configuration/use-condarc.html#set-ch-alias). The default is just `defaults`.
 
 EXAMPLE:
-> ###### channels:
-> - <anaconda_dot_org_username>
-> - http&#65279;://some.custom/channel
-> - file:///some/local/directory
-> - defaults
+> channels:\
+> \- <anaconda_dot_org_username>\
+> \- http&#65279;://some.custom/channel\
+> \- file:///some/local/directory\
+> \- defaults
 
 To select channels for a single environment, put a `.condarc` file in the root directory of that environment (or use the `--env` option when using `conda config`).
 
@@ -107,10 +107,10 @@ If the system `.condarc` file specifies a channel_alias, it overrides any channe
 
 Normally the defaults channel points to several channels at the [repo.continuum.io](https://repo.anaconda.com/) repository, but if default_channels is defined, it sets the new list of default channels. This is especially useful for air gap and enterprise installations:
 
-> default_channels:
-> - <anaconda_dot_org_username>
-> - http&#65279;://some.custom/channel
-> - file:///some/local/directory
+> default_channels:\
+> \- <anaconda_dot_org_username>\
+> \- http&#65279;://some.custom/channel\
+> \- file:///some/local/directory
 
 ### Update conda automatically (auto_update_conda)
 
@@ -165,13 +165,13 @@ EXAMPLE:
 By default, proxy settings are pulled from the HTTP_PROXY and HTTPS_PROXY environment variables or the system. Setting them here overrides that default:
 
 > proxy_servers:
->   http: http://user:pass@corp.com:8080
->   https: http://user:pass@corp.com:8080
+>   http&#65279;: http&#65279;://user&#65279;:pass@corp.com:8080
+>   https&#65279;: http&#65279;://user&#65279;:pass@corp.com:8080
 
 To give a proxy for a specific scheme and host, use the scheme://hostname form for the key. This matches for any request to the given scheme and exact host name:
 
 > proxy_servers:
->   'http://10.20.1.128': 'http://10.10.1.10:5323'
+>   'http&#65279;://10.20.1.128': 'https&#65279;://10.10.1.10:5323'
 
 If you do not include the user name and password or if authentication fails, conda prompts for a user name and password.
 
