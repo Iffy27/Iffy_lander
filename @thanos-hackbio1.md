@@ -79,11 +79,11 @@ Listing channel locations in the `.condarc` file overrides conda defaults, causi
 Use `defaults` to automatically include all default channels. Non-URL channels are interpreted as Anaconda.org user names. You can change this by modifying the channel_alias as described in [Set a channel alias (channel_alias)](https://docs.conda.io/projects/conda/en/4.6.1/user-guide/configuration/use-condarc.html#set-ch-alias). The default is just `defaults`.
 
 EXAMPLE:
-> channels:
->   \- <anaconda_dot_org_username>
->   \- http://some.custom/channel
->   \- file:///some/local/directory
->   \- defaults
+> ###### channels:
+> - <anaconda_dot_org_username>
+> - http&#65279;://some.custom/channel
+> - file:///some/local/directory
+> - defaults
 
 To select channels for a single environment, put a `.condarc` file in the root directory of that environment (or use the `--env` option when using `conda config`).
 
@@ -108,9 +108,9 @@ If the system `.condarc` file specifies a channel_alias, it overrides any channe
 Normally the defaults channel points to several channels at the [repo.continuum.io](https://repo.anaconda.com/) repository, but if default_channels is defined, it sets the new list of default channels. This is especially useful for air gap and enterprise installations:
 
 > default_channels:
->   \- <anaconda_dot_org_username>
->   \- http://some.custom/channel
->   \- file:///some/local/directory
+> - <anaconda_dot_org_username>
+> - http&#65279;://some.custom/channel
+> - file:///some/local/directory
 
 ### Update conda automatically (auto_update_conda)
 
